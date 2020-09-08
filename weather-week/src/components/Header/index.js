@@ -5,9 +5,7 @@ function Header ()  {
     return (
         <div>
             <form>
-                <h1>Input City Name</h1>
-                <input>
-                </input>
+                <h1>Weather Week</h1>
             </form>
         </div>
     )
