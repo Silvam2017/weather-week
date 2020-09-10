@@ -44,16 +44,16 @@ function WeatherInfo()  {
                         <div className='city'>{CurrentWeather.name}</div>
                     </div>
                     <div className='weather'>
-                        <div className='temp'>{Math.round(CurrentWeather.main.temp)}°F</div>
-                        <div className='description'>{CurrentWeather.weather[0].main}</div>
-                        <div className='humid'>{CurrentWeather.main.humidity}%</div>
-                        <div className='wind'>{Math.round(CurrentWeather.wind.speed)}mph</div>
-                        <div className='icon'>
+                    <div className='icon'>
                             <img 
                                 src={`http://openweathermap.org/img/wn/10d@2x.png`} alt='weather icon'
                                 className='weather-icon'
                             />
                         </div>
+                        <div className='temp'>Temperature: {Math.round(CurrentWeather.main.temp)}°F</div>
+                        <div className='description'>Description: {CurrentWeather.weather[0].main}</div>
+                        <div className='humid'>Relative Humidity: {CurrentWeather.main.humidity}%</div>
+                        <div className='wind'>Wind Speed: {Math.round(CurrentWeather.wind.speed)}mph</div>
                     </div>
                 </div>
             ) : (''))}
