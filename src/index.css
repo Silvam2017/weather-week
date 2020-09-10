@@ -62,7 +62,6 @@ code {
 
 #container {
   padding: 25px;
-  min-height: 50rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
