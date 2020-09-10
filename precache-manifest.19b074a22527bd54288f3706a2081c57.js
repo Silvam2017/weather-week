@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "26890f260ea9d67417c1a6c75fe47247",
+    "revision": "41ce5494c363030ec206c40152eebd09",
     "url": "/weather-week/index.html"
   },
   {
-    "revision": "92eac72e01a6e9b00c72",
-    "url": "/weather-week/static/css/main.f03ef4cb.chunk.css"
+    "revision": "c7683b0d1531cd80be7e",
+    "url": "/weather-week/static/css/main.150b2b06.chunk.css"
   },
   {
     "revision": "52b53f72360058cd1441",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weather-week/static/js/2.b27a5fad.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "92eac72e01a6e9b00c72",
+    "revision": "c7683b0d1531cd80be7e",
     "url": "/weather-week/static/js/main.b86a8b61.chunk.js"
   },
   {
