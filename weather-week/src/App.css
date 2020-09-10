@@ -1,5 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +44,78 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#container {
+  padding: 25px;
+  min-height: 100vh;
+}
+
+#location {
+  width: 50px;
+  margin: 0 0 75px;
+}
+
+#search-container {
+  display: block;
+  width: 50%;
+  padding: 15px;
+}
+
+.location {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.weather {
+  text-align: center;
+}
+
+.temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  border-radius: 16px;
+  padding: 15px 25px;
+  font-size: 90px;
+  font-weight: 900;
+}
+
+.description {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.humid {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.wind {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.icon {
+  max-width: 128px;
+}
+
+main {
+  flex-grow: 1;
+  text-align: center;
+  padding: 25px;
+}
+footer {
+  padding: 2px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #EEEEEE;
+  font-size: small;
+  text-align: center;
+}
+header {
+  padding: 25px;
 }

@@ -1,45 +1,68 @@
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 
-function WeatherInfo(props)  {
+function WeatherInfo()  {
 
-    useEffect(() => {
-        document.title = setCurrentWeather.name;
-    }, [CurrentWeather]);
+    const apiKey='7aeefed14e670086fed17e50b13e3bf5'
 
-    const {
-        weather=[],
-        setCurrentWeather,
-        CurrentWeather
-    } = props;
+    const [
+        query,
+        setQuery
+     ] = useState('');
 
-    let city = ''
+    const [
+        CurrentWeather,
+        setCurrentWeather
+     ] = useState({});
 
-    const envVariables = process.env
-    const {weatherAPIKey} = envVariables
-
-    function handleClick(e)  {
-        e.preventDefault();
-        fetch("api.openweathermap.org/data/2.5/weather?q="+{city}+"&appid="+process.env.weatherAPIKey)
-        .then(response => response.json())
-        .then(data => 
-            console.log(data))
+    const search = event => {
+        if (event.key === 'Enter') {
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=${apiKey}`)
+            .then(response => response.json())
+            .then(response => {
+              setCurrentWeather(response);
+              setQuery('');
+              console.log(response);
+            });
+        }
     }
 
     return (
         <div>
             <div id='search-container'>
-                <span>
-                <input htmlFor='search' type='text' placeholder='City'/>
-                <input type='submit' value='submit' onClick={(e) => handleClick(e)}></input>
-                </span>
+                    <input 
+                    type="text"
+                    className="search-bar"
+                    placeholder="Enter City Name"
+                    onChange={e => setQuery(e.target.value)}
+                    value={query}
+                    onKeyPress={search}
+                />
             </div>
-            <div id='container'>
-                <div>
-
+            {(typeof CurrentWeather.main != 'undefined' ? (
+                <div id='container'>
+                    <div className='location'>
+                        <div className='city'>{CurrentWeather.name}</div>
+                    </div>
+                    <div className='weather'>
+                        <div className='temp'>{Math.round(CurrentWeather.main.temp)}°F</div>
+                        <div className='description'>{CurrentWeather.weather[0].main}</div>
+                        <div className='humid'>{CurrentWeather.main.humidity}%</div>
+                        <div className='wind'>{Math.round(CurrentWeather.wind.speed)}mph</div>
+                        <div className='icon'>
+                            <img 
+                                src={`http://openweathermap.org/img/wn/10d@2x.png`} alt='weather icon'
+                                className='weather-icon'
+                            />
+                        </div>
+                    </div>
                 </div>
-            </div>
+            ) : (''))}
         </div>
     )
 }
 
 export default WeatherInfo;
+
+/*
+
+*/
