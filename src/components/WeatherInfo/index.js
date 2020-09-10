@@ -48,6 +48,7 @@ function WeatherInfo()  {
                             <img 
                                 src={`http://openweathermap.org/img/wn/10d@2x.png`} alt='weather icon'
                                 className='weather-icon'
+                                id='icon-img'
                             />
                         </div>
                         <div className='temp'>Temperature: {Math.round(CurrentWeather.main.temp)}°F</div>

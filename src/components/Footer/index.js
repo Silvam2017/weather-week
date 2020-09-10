@@ -3,7 +3,7 @@ import React from 'react';
 function Footer ()  {
 
     return (
-        <div>
+        <div id='footer-text'>
             Created by Michael Silva
         </div>
     )
