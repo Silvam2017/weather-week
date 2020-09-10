@@ -2,7 +2,7 @@
   "name": "weather-week",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://silvam2017.github.io/weather-week",
+  "homepage": "http://Silvam2017.github.io/weather-week",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
