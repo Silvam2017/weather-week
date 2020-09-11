@@ -21,7 +21,6 @@ function WeatherInfo()  {
             .then(response => {
               setCurrentWeather(response);
               setQuery('');
-              console.log(response);
             });
         }
     }
@@ -41,7 +40,7 @@ function WeatherInfo()  {
             {(typeof CurrentWeather.main != 'undefined' ? (
                 <div id='container'>
                     <div className='location'>
-                        <div className='city'>{CurrentWeather.name}</div>
+                        <div className='city'>{CurrentWeather.name}, {CurrentWeather.sys.country}</div>
                     </div>
                     <div className='weather'>
                     <div className='icon'>
@@ -52,6 +51,7 @@ function WeatherInfo()  {
                             />
                         </div>
                         <div className='temp'>Temperature: {Math.round(CurrentWeather.main.temp)}°F</div>
+                        <div className='feel'>Feels Like: {Math.round(CurrentWeather.main.feels_like)}°F</div>
                         <div className='description'>Description: {CurrentWeather.weather[0].main}</div>
                         <div className='humid'>Relative Humidity: {CurrentWeather.main.humidity}%</div>
                         <div className='wind'>Wind Speed: {Math.round(CurrentWeather.wind.speed)}mph</div>
