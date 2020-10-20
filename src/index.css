@@ -25,6 +25,10 @@ code {
   min-height: 100vh;
 }
 
+html {
+  background-color: #fcb69f;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -61,11 +65,10 @@ code {
 }
 
 #container {
-  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(coral, beige);
+  background-image: linear-gradient(#fcb69f, #ffecd2);
 }
 
 #location {
@@ -78,7 +81,7 @@ code {
   justify-content: center;
   width: 100%;
   padding: 15px;
-  background-color: coral;
+  background-color: #fcb69f;
 }
 
 .search-bar {
@@ -99,7 +102,6 @@ code {
 .temp {
   position: relative;
   display: inline-block;
-  margin: 30px auto;
   border-radius: 16px;
   padding: 15px 25px;
   font-size: 40px;
@@ -136,50 +138,36 @@ code {
 main {
   flex-grow: 1;
   text-align: center;
-  padding: 25px;
-  background-color: beige;
+  background-color: #ffecd2;
 }
 
 #footer-container {
-  padding: 2px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: small;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  background-color: beige;
-}
 
-header {
-  padding: 25px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffecd2;
 }
 
 #header-text  {
   text-align: center;
-  background-color: coral;
+  background-color: #fcb69f;
 }
 
 #footer-text {
-  text-align: center;
-  position: absolute;
+  text-align: left;
   bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: beige;
+  background-color: #ffecd2;
 }
 
 #img-container {
-  display: absolute;
-  bottom: 0;
-  width: 15%;
-  background-color: beige;
+  width: 7%;
+  background-color: #ffecd2;
 }
 
 #gitIcon {
 width: 100%;
 margin: auto;
 padding-bottom: 10px;
-background-color: beige;
+background-color: #ffecd2;
 }
